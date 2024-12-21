@@ -1,10 +1,9 @@
 def factorial(n):
-  fact = 1
-  for i in range(1,n+1):
-    fact*=i
-  
-  return fact
+  if(n==0):
+    return 1
+  return n*factorial(n-1)
 
 def test_factorial():
   assert factorial(5) == 120
   assert factorial(4) == 24
+  assert factorial(0) == 1
